@@ -44,6 +44,7 @@ jobs:
     - name: az feature register
       run: |
         az feature register --namespace "Microsoft.ContainerService" --name "EnableWorkloadIdentityPreview"
+        az provider register -n Microsoft.ContainerService
 
       # Attach ACR to AKS
     - name: attach Azure Container Registry to AKS
